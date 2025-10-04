@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <title>EmDev - Développement web</title>
+  <meta name="description" content="Développeur web freelance spécialisé dans la création de sites vitrines, applications web et optimisation SEO. Obtenez un site moderne, responsive et adapté à vos besoins.">
+
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
@@ -16,69 +20,188 @@
       emailjs.init("pjNRT6_IF-NLANWOj"); 
     })();
   </script>
+
+  <!-- Indexation et suivi -->
+   <meta name="author" content="Emeric Pataut">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="EmDev - Développeur Web Freelance">
+  <meta property="og:description" content="Développeur web freelance. Création de site web, developpement applicaton web">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.emdev-developpement-web.fr">
+  <meta property="og:image" content="https://www.ton-domaine.fr/assets/images/preview.jpg">
+  <meta property="og:site_name" content="EmDev - Développement Web">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EmDev - Développeur Web Freelance">
+  <meta name="twitter:description" content="Développeur web freelance. Création de site web, developpement applicaton web">
+  <meta name="twitter:image" content="https://www.ton-domaine.fr/assets/images/preview.jpg">
+
+
+
+
+
+
 </head>
 
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <div class="icon-circle">
-        <span class="icon">&lt;&gt;</span>
-      </div>
-      <div class="text">
-        <div class="main-title">
-          <span class="em">Em</span><span class="dev">Dev</span>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <div class="icon-circle">
+          <span class="icon">&lt;&gt;</span>
         </div>
-        <div class="sub-title">Développement web</div>
+        <div class="text">
+          <h1 class="main-title">
+            <span class="em">Em</span><span class="dev">Dev</span>
+            <span class="sub-title">Développement web</span>
+          </h1>
+        </div>
       </div>
-    </div>
-  </header>
 
+      <div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#avis">Dernier projet</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
 
 
   <!-- SECTION PRINCIPALE -->
   <main>
 
-    <h1>Site en cours de construction 🚧</h1>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Un site web simple, clair, moderne et pensé avec vous !</h2>
+        <h3>Moi c'est Emeric, je suis développeur web free-lance</h3>
+        <p>Avec <strong>EmDev</strong> j'accompagne les indépendants, créateurs et petites entreprises dans la création d'un site web, à leur image</p>
+        <p>Vous avez besoin d'une présence en ligne qui vous ressemble ?</p>
+        <p>Discutons des à présent de votre projet web</p>
 
-    <div class="presentation">
-        <p class="first-p">
-            Le site web de ma société <strong><span class="em">Em</span><span class="dev">Dev</span></strong> est en cours de développement. <br /> 
-            Celui-ci arrive bientot ! <br />  
-        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-light">Prendre contact</a>
+          <a href="https://epataut.fr" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Voir portfolio</a>
+        </div>
+      </div>
+    </section>
+
+
+  <div class="container">
+
+    <section class="prestations" id="prestations">
+      <h2>Prestations</h2>
+      <div class="prestations-grid">
+        
+        <div class="prestation-card">
+          <h3>Site Web</h3>
+          <p class="price">À partir de 750€</p>
+          <p>Site de présentation avec formulaire de contact, optimisation, référencement, liens réseaux.</p>
+          <a href="#contact" class="btn btn-light">Prendre contact</a>
+        </div>
+
+        <div class="prestation-card">
+          <h3>Application web</h3>
+          <p class="price">À partir de 950€</p>
+          <p>Application web avec fonctionnalités spécifiques, optimisation, référencement.</p>
+          <a href="#contact" class="btn btn-light">Prendre contact</a>
+        </div>
+
+        <div class="prestation-card">
+          <h3>Prestations autres</h3>
+          <p class="price">Sur devis</p>
+          <p>Création de landing page, mission d’optimisation, d'intégration</p>
+          <a href="#contact" class="btn btn-light">Prendre contact</a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    
+  <!-- DERNIER PROJET / AVIS CLIENT -->
+  <section class="last-project" id="avis">
+    <div class="project">
+      <h2>Dernier projet</h2>
+      <div class="project-card">
+        <img src="assets/images/img_sophronath.png" alt="image projet Sophronath">
+        <div class="project-info">
+          <h3>
+            <a href="https://sophronath-77.fr" target="_blank" rel="noopener noreferrer">
+              Sophronath-77.fr
+            </a>
+          </h3>
+          <p>Site vitrine moderne avec formulaire de contact, responsive et optimisé SEO.</p>
+          <p>Composé d'une page d'accueil avec plusieurs sections ainsi que de six pages annexes</p>
+        </div>
+      </div>
     </div>
-
-    <div>
-        <p class="second-p">
-            En attendant sa mise en ligne, vous pouvez d’ores et déjà me contacter via le formulaire ci-dessous pour toute demande d’accompagnement dans votre projet web.
-        </p>
+<!--   
+    <div class="review">
+      <h2>Avis client</h2>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="content">"Un travail rapide, efficace et un site qui correspond exactement à nos attentes. Je recommande !"</p>
+        <span class="client">— Nathalie O. - Sophrologue</span>
+      </div>
     </div>
+-->
+
+  </section>
 
 
-    <!-- Formulaire de contact -->
-  <div class="form-container">
-    <h2>Contacter-moi !</h2>
-    <div class="contact-form">
-      <form id="contactForm">
-        <label for="email" class="sr-only">Adresse mail</label>
-        <input type="email" id="email" name="user_email" placeholder="exemple@mail.com" required>
 
-        <label for="user_name" class="sr-only">Nom</label>
-        <input type="text" id="user_name" name="user_name" placeholder="Votre nom" required>
 
-        <label for="subject" class="sr-only">Objet</label>
-        <input type="text" id="subject" name="subject" placeholder="Objet du contact" required>
+    <section class="contact" id="contact">
 
-        <label for="message" class="sr-only">Message</label>
-        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+      <h2>Contact</h2>
 
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
+      <div class="contact-grid">
+        <!-- Formulaire de contact -->
+        <div class="form-container">
+          <h3>Contactez-moi !</h3>
+          <div class="contact-form">
+            <form id="contactForm">
+              <label for="email" class="sr-only">Adresse mail</label>
+              <input type="email" id="email" name="user_email" placeholder="exemple@mail.com" required>
+
+              <label for="user_name" class="sr-only">Nom</label>
+              <input type="text" id="user_name" name="user_name" placeholder="Votre nom" required>
+
+              <label for="subject" class="sr-only">Objet</label>
+              <input type="text" id="subject" name="subject" placeholder="Objet du contact" required>
+
+              <label for="message" class="sr-only">Message</label>
+              <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+              <button type="submit">Envoyer</button>
+            </form>
+          </div>   
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="socials">
+          <h3>Suivez-moi sur les réseaux</h3>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
   </div>
-
 
     <!-- Modale -->
   <div id="modal" class="modal">
@@ -87,9 +210,6 @@
       <button id="closeModal">OK</button>
     </div>
   </div>
-
-
-
 
   </main>
 

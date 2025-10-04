@@ -29,3 +29,4 @@ form.addEventListener("submit", function(e) {
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
