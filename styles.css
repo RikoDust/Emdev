@@ -95,11 +95,11 @@ body {
 }
 
 .em {
-  color: #00AEEF;
+  color: #007FAD;
 }
 
 .dev {
-  color: #000;
+  color: #002b5c;
 }
 
 .main-title {
@@ -126,19 +126,20 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #00AEEF, #002b5c); /* bleu clair -> bleu foncé */
+  background: linear-gradient(135deg, #00AEEF, #002b5c); 
   color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .hero h2 {
   font-size: 36px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero h3{
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .hero span{
@@ -148,13 +149,14 @@ body {
 
 .hero p {
   font-size: 20px;
-  margin: 12px 0;
+  margin: 18px 0;
   line-height: 1.5rem;
 }
 
 /* Boutons */
 .hero-buttons {
   margin-top: 4rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -209,6 +211,190 @@ body {
 
 
 
+
+/* SECTION PRÉSENTATION */
+.présentation {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+}
+
+.présentation h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #002b5c;
+  text-align: center;
+}
+
+.présentation h3 {
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  color: #00AEEF;
+  text-align: center;
+}
+
+.présentation .titreweb{
+  color: #002b5c;
+}
+
+
+
+
+/* Paragraphes d'introduction */
+.présentation > div:first-of-type {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.présentation > div:first-of-type p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #333;
+}
+
+.présentation > div:first-of-type span {
+  font-weight: bold;
+  color: #00AEEF;
+}
+
+/* Grid pour les points "Sans site" et "Avec site" */
+.présentation > div:nth-of-type(2),
+.présentation > div:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.présentation > div:nth-of-type(2) > div,
+.présentation > div:nth-of-type(3) > div {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet hover */
+.présentation > div:nth-of-type(2) > div:hover,
+.présentation > div:nth-of-type(3) > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,174,239,0.2);
+}
+
+/* Style spécifique pour la section "Sans site" (plus sombre) */
+.présentation > div:nth-of-type(2) > div {
+  /*background: #002b5c;*/
+  color: #002b5c;
+  border-left: 4px solid #00AEEF;
+}
+
+.présentation > div:nth-of-type(3) > div {
+  border-left: 4px solid #002b5c;
+}
+
+
+/* Style pour les strong dans la dernière section */
+.présentation > div:nth-of-type(3) strong {
+  color: #002b5c;
+}
+
+
+
+
+
+/* SECTION CONFIANCE */
+.confiance {
+  padding: 60px 20px;
+  background: #002b5c; /* fond bleu foncé */
+  color: #fff;
+  border-radius: 15px;
+}
+
+.confiance h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Grid pour les cartes */
+.confiance > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartes individuelles */
+.confiance > div > div {
+  background: transparent;
+  border: 1px solid #00AEEF; /* bordure fine bleu clair */
+  border-radius: 15px;
+  padding: 30px 25px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.confiance > div > div:hover {
+  transform: translateY(-5px);
+  border-color: #fff; /* bordure blanche au hover */
+  box-shadow: 0 0 45px 4px rgb(255, 255, 255, 0.10);
+}
+
+.confiance h3 {
+  font-size: 20px;
+  color: #00AEEF;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.confiance p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SECTION PRESTATIONS */
 .prestations {
   padding: 60px 20px;
@@ -232,17 +418,56 @@ body {
   border-radius: 15px;
   padding: 30px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: #002b5c 1px solid;
+}
+
+/* Trait coloré en haut de la carte */
+.prestation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #00AEEF, #002b5c);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
 }
 
 .prestation-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 45px 4px rgb(0, 174, 239, 0.10);
+}
+
+.prestation-card:hover::before {
+  transform: scaleX(1);
 }
 
 .prestation-card h3 {
   font-size: 22px;
-  color: #00AEEF;
+  color: #002b5c;
   margin-bottom: 10px;
+}
+
+/* Icône Font Awesome animée */
+.card-icon {
+  font-size: 48px;
+  color: #00AEEF;
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.card-icon i {
+  display: block;
+}
+
+.prestation-card:hover .card-icon {
+  transform: scale(1.1) rotateY(360deg);
+  transition: transform 0.6s ease;
 }
 
 .prestation-card .price {
@@ -259,6 +484,141 @@ body {
 .prestation-card a {
   margin-top: 2rem;
 }
+
+
+
+
+
+/* SECTION ACCOMPAGNEMENT */
+.accompagnement {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.accompagnement h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #002b5c;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accompagnement > p {
+  font-size: 18px;
+  text-align: center;
+  color: #007FAD;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* Conteneur du processus */
+.accompagnement > div {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Ligne verticale centrale */
+.accompagnement > div::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  bottom: 120px; /* Distance depuis le bas */
+  width: 3px;
+  background: linear-gradient(to bottom, #00AEEF, #002b5c);
+}
+
+/* Chaque étape */
+.accompagnement > div > div {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 40px;
+}
+
+/* Numéro dans un cercle */
+.accompagnement h3 {
+  font-size: 22px;
+  color: #002b5c;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.accompagnement h3 span {
+  position: absolute;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 174, 239, 0.3);
+  z-index: 1;
+}
+
+/* Dégradé de couleurs pour chaque numéro */
+.accompagnement > div > div:nth-child(1) h3 span {
+  background: #00AEEF; /* Bleu le plus clair */
+}
+
+.accompagnement > div > div:nth-child(2) h3 span {
+  background: #0099D6;
+}
+
+.accompagnement > div > div:nth-child(3) h3 span {
+  background: #0085BD;
+}
+
+.accompagnement > div > div:nth-child(4) h3 span {
+  background: #00629A;
+}
+
+.accompagnement > div > div:nth-child(5) h3 span {
+  background: #002b5c; /* Bleu le plus foncé */
+}
+
+.accompagnement > div > div p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Texte final "Simple - Efficace - Transparent" */
+.accompagnement > div > span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #002b5c;
+  margin-top: 50px;
+  letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,7 +662,7 @@ body {
 }
 
 .project-info h3 a{
-  color: #00AEEF;
+  color: #007FAD;
   text-decoration: none;
 }
 
@@ -585,6 +945,96 @@ footer a{
 
 
 
+/* Responsive */
+@media (max-width: 768px) {
+  .présentation h2 {
+    font-size: 24px;
+  }
+  
+  .présentation h3 {
+    font-size: 20px;
+  }
+  
+  .présentation > div:first-of-type p {
+    font-size: 16px;
+  }
+  
+  .présentation > div:nth-of-type(2),
+  .présentation > div:nth-of-type(3) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
 
 
+/* Responsive */
+@media (max-width: 768px) {
+  .confiance {
+    padding: 40px 20px;
+  }
+  
+  .confiance h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .confiance > div {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .confiance > div > div {
+    padding: 25px 20px;
+  }
+  
+  .confiance h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accompagnement h2 {
+    font-size: 24px;
+  }
+
+  .accompagnement > p {
+    font-size: 16px;
+  }
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 150px; /* Distance depuis le bas pour mobile */
+  }
+
+  .accompagnement > div > div {
+    padding-left: 75px;
+  }
+
+  .accompagnement h3 {
+    font-size: 18px;
+  }
+
+  .accompagnement h3 span {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .accompagnement > div > span {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 630px) {
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 200px; /* Distance depuis le bas pour mobile */
+  }
+}
 
