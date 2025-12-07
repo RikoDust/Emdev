@@ -1029,7 +1029,7 @@ footer a{
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 640px) {
 
   /* Ligne verticale plus proche à gauche sur mobile */
   .accompagnement > div::before {
@@ -1037,4 +1037,24 @@ footer a{
     bottom: 200px; /* Distance depuis le bas pour mobile */
   }
 }
+
+@media (max-width: 405px) {
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 260px; /* Distance depuis le bas pour mobile */
+  }
+}
+
+@media (max-width: 370px) {
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 300px; /* Distance depuis le bas pour mobile */
+  }
+}
+
+
 
