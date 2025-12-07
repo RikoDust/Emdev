@@ -17,15 +17,33 @@ body {
 
 /* HEADER */
 .header {
-  margin-top: 0;
-  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px 2rem;
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  position: relative;
+  background: #fff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Header au scroll - effet glassmorphism */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+}
+
+/* Espacement pour compenser le header fixe */
+body {
+  padding-top: 90px;
 }
 
 /* Bouton burger (caché par défaut sur desktop) */
@@ -434,6 +452,8 @@ body {
 }
 
 .prestations h2 {
+  margin-top: 3rem;
+  text-align: left;
   font-size: 28px;
   margin-bottom: 40px;
   color: #002b5c;
@@ -670,6 +690,7 @@ body {
 }
 
 .last-project h2 {
+  margin-top: 3rem;
   font-size: 28px;
   margin-bottom: 20px;
   color: #002b5c;
@@ -745,6 +766,7 @@ body {
 }
 
 .contact h2 {
+  margin-top: 3rem;
   font-size: 28px;
   margin-bottom: 20px;
   color: #002b5c;
@@ -939,8 +961,11 @@ footer a{
 /* VERSION MOBILE */
 @media (max-width: 768px) {
   .header {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 15px 1rem;
+  }
+
+  body {
+    padding-top: 70px;
   }
 
   /* Afficher le bouton burger */
@@ -959,13 +984,16 @@ footer a{
     background: #fff;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
     padding: 60px 20px 20px;
   }
 
   /* Menu ouvert */
   .nav.active {
     right: 0;
+    background: rgba(248, 249, 250, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   }
 
   /* Afficher le bouton fermer quand le menu est ouvert */
