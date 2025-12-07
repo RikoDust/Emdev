@@ -25,6 +25,38 @@ body {
   align-items: center;
   margin-left: 2rem;
   margin-right: 2rem;
+  position: relative;
+}
+
+/* Bouton burger (caché par défaut sur desktop) */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #002b5c;
+  cursor: pointer;
+  z-index: 1001;
+  transition: opacity 0.3s ease;
+}
+
+/* Masquer le burger quand le menu est ouvert */
+.burger-menu.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Bouton fermer (caché par défaut) */
+.close-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #002b5c;
+  cursor: pointer;
 }
 
 /* NAVIGATION */
@@ -40,7 +72,7 @@ body {
 .nav a {
   position: relative;
   text-decoration: none;
-  color: #002b5c; /* bleu foncé */
+  color: #002b5c;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -53,13 +85,13 @@ body {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #00AEEF; /* bleu clair */
+  background: #00AEEF;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .nav a:hover {
-  color: #00AEEF; /* bleu clair */
+  color: #00AEEF;
 }
 
 .nav a:hover::after {
@@ -105,16 +137,18 @@ body {
 .main-title {
   font-size: 38px;
   font-weight: bold;
-  margin: 0; /* enlève les marges par défaut du h1 */
+  margin: 0;
 }
 
 .sub-title {
-  display: block; /* pour forcer à passer à la ligne */
+  display: block;
   font-size: 14px;
   color: #000;
   margin-top: 2px;
   font-weight: bold;
 }
+
+
 
 
 
@@ -163,15 +197,15 @@ body {
 }
 
 .btn {
-  padding: 12px 24px;
-  border-radius: 30px; /* angles arrondis */
+  padding: 14px 26px;
+  border-radius: 12px; 
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05); /* léger zoom */
+  transform: scale(1.08); /* léger zoom */
 }
 
 /* Boutons clairs */
@@ -238,8 +272,6 @@ body {
 }
 
 
-
-
 /* Paragraphes d'introduction */
 .présentation > div:first-of-type {
   text-align: center;
@@ -247,7 +279,7 @@ body {
 }
 
 .présentation > div:first-of-type p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8;
   margin: 15px 0;
   color: #333;
@@ -904,18 +936,108 @@ footer a{
 
 /******* VERSION MOBILE *******/
 
+/* VERSION MOBILE */
 @media (max-width: 768px) {
+  .header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-  header{
-    display: flex;
-    flex-direction: column;
+  /* Afficher le bouton burger */
+  .burger-menu {
+    display: block;
   }
-  .nav ul{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+  /* Navigation en overlay */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 60px 20px 20px;
   }
+
+  /* Menu ouvert */
+  .nav.active {
+    right: 0;
+  }
+
+  /* Afficher le bouton fermer quand le menu est ouvert */
+  .nav.active .close-menu {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  /* Overlay sombre derrière le menu */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  body.menu-open::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Adapter la taille du logo */
+  .main-title {
+    font-size: 28px;
+  }
+
+  .sub-title {
+    font-size: 12px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
 
     .last-project {
     grid-template-columns: 1fr; /* une seule colonne */

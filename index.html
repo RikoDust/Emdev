@@ -44,30 +44,37 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-      <div class="logo">
-        <div class="icon-circle">
-          <span class="icon">&lt;&gt;</span>
-        </div>
-        <div class="text">
-          <h1 class="main-title">
-            <span class="em">Em</span><span class="dev">Dev</span>
-            <span class="sub-title">Développement web</span>
-          </h1>
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <div class="icon-circle">
+        <span class="icon">&lt;&gt;</span>
       </div>
+      <div class="text">
+        <h1 class="main-title">
+          <span class="em">Em</span><span class="dev">Dev</span>
+          <span class="sub-title">Développement web</span>
+        </h1>
+      </div>
+    </div>
 
-      <div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#prestations">Prestations</a></li>
-          <li><a href="#avis">Dernier projet</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      </div>
-    </header>
+    <!-- Bouton burger pour mobile -->
+    <button class="burger-menu" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <button class="close-menu" aria-label="Fermer">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#avis">Dernier projet</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
   <!-- SECTION PRINCIPALE -->
@@ -217,7 +224,7 @@
 
         <div>
           <h3><span>5</span>Mise en ligne & Livrables</h3>
-          <p>Je gère la mise en ligne et fais un suivant sur 30 jours au besoin<br>Je vous remets tous les livrables nécessaires pour la prise en main de votre site.</p>
+          <p>Je gère la mise en ligne et fais un suivi sur 30 jours au besoin<br>Je vous remets tous les livrables nécessaires pour la prise en main de votre site.</p>
         </div>
 
         <span>Simple - Efficace -  Transparent</span>
@@ -342,7 +349,10 @@
   <p>© 2025 - Emdev - Emeric Pataut - Tous droits réservés</p>
 </footer>
 
+
+<script src="mobile_menu.js"></script>
 <script src="form.js"></script>
+
 
 </body>
 </html>
