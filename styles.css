@@ -14,6 +14,11 @@ body {
 }
 
 
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+
 
 /* HEADER */
 .header {
@@ -46,9 +51,9 @@ body {
   padding-top: 90px;
 }
 
-/* Bouton burger (caché par défaut sur desktop) */
+/* Bouton burger - TOUJOURS VISIBLE */
 .burger-menu {
-  display: none;
+  display: block;
   background: none;
   border: none;
   font-size: 28px;
@@ -77,12 +82,37 @@ body {
   cursor: pointer;
 }
 
-/* NAVIGATION */
+/* NAVIGATION - Menu latéral sur toutes les tailles */
+.nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  background: #f5f9fc;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  padding: 60px 30px 20px;
+}
+
+/* Menu ouvert */
+.nav.active {
+  right: 0;
+}
+
+/* Afficher le bouton fermer quand le menu est ouvert */
+.nav.active .close-menu {
+  display: block;
+}
+
 .nav ul {
   font-size: 1.5rem;
   list-style: none;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -93,27 +123,36 @@ body {
   color: #002b5c;
   font-weight: bold;
   transition: color 0.3s ease;
-}
-
-/* Soulignement animé */
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #00AEEF;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  display: block;
+  padding: 10px 0;
 }
 
 .nav a:hover {
   color: #00AEEF;
 }
 
-.nav a:hover::after {
+/* Overlay sombre derrière le menu */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+body.menu-open::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 /* LOGO */
@@ -272,7 +311,7 @@ body {
 
 .présentation h2 {
   font-size: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
   color: #002b5c;
   text-align: center;
 }
@@ -359,7 +398,7 @@ body {
 
 /* SECTION CONFIANCE */
 .confiance {
-  padding: 60px 20px;
+  padding: 40px 20px;
   background: #002b5c; /* fond bleu foncé */
   color: #fff;
   border-radius: 15px;
@@ -452,7 +491,6 @@ body {
 }
 
 .prestations h2 {
-  margin-top: 3rem;
   text-align: left;
   font-size: 28px;
   margin-bottom: 40px;
@@ -536,6 +574,21 @@ body {
 .prestation-card a {
   margin-top: 2rem;
 }
+
+
+/* Boutons card */
+.btn-card{
+  margin-top: 1rem;
+  background: rgba(0, 174, 239, 0.5);
+  color: #002b5c;
+}
+
+.btn-card:hover {
+  background: #002b5c;
+  color: #fff;
+}
+
+
 
 
 
@@ -690,7 +743,6 @@ body {
 }
 
 .last-project h2 {
-  margin-top: 3rem;
   font-size: 28px;
   margin-bottom: 20px;
   color: #002b5c;
@@ -766,7 +818,6 @@ body {
 }
 
 .contact h2 {
-  margin-top: 3rem;
   font-size: 28px;
   margin-bottom: 20px;
   color: #002b5c;
@@ -960,6 +1011,12 @@ footer a{
 
 /* VERSION MOBILE */
 @media (max-width: 768px) {
+
+  section[id] {
+  scroll-margin-top: 50px;
+  }
+
+
   .header {
     padding: 15px 1rem;
   }
@@ -968,71 +1025,14 @@ footer a{
     padding-top: 70px;
   }
 
-  /* Afficher le bouton burger */
-  .burger-menu {
-    display: block;
-  }
-
-  /* Navigation en overlay */
   .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
     max-width: 300px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-    z-index: 1001;
     padding: 60px 20px 20px;
   }
 
-  /* Menu ouvert */
-  .nav.active {
-    right: 0;
-    background: rgba(248, 249, 250, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  }
-
-  /* Afficher le bouton fermer quand le menu est ouvert */
-  .nav.active .close-menu {
-    display: block;
-  }
-
   .nav ul {
-    flex-direction: column;
-    gap: 20px;
     font-size: 1.3rem;
-  }
-
-  .nav a::after {
-    display: none;
-  }
-
-  /* Overlay sombre derrière le menu */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
-  }
-
-  body.menu-open::before {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  body.menu-open {
-    overflow: hidden;
+    gap: 20px;
   }
 
   /* Adapter la taille du logo */
@@ -1051,6 +1051,14 @@ footer a{
   }
 
   .icon {
+    font-size: 24px;
+  }
+
+  .burger-menu {
+    font-size: 24px;
+  }
+
+  .close-menu {
     font-size: 24px;
   }
 }
