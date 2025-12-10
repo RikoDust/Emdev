@@ -512,6 +512,8 @@ body.menu-open {
   position: relative;
   overflow: hidden;
   border: #002b5c 1px solid;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Trait coloré en haut de la carte */
@@ -572,20 +574,24 @@ body.menu-open {
 }
 
 .prestation-card a {
-  margin-top: 2rem;
+  margin-top: auto;
+  align-self: center;
+  /*padding-top: 20px;*/
 }
 
 
 /* Boutons card */
 .btn-card{
-  margin-top: 1rem;
   background: rgba(0, 174, 239, 0.5);
   color: #002b5c;
+  transition: all 0.3s ease;
 }
 
 .btn-card:hover {
   background: #002b5c;
   color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 43, 92, 0.3);
 }
 
 
@@ -646,7 +652,6 @@ body.menu-open {
 /* Numéro dans un cercle */
 .accompagnement h3 {
   font-size: 22px;
-  color: #002b5c;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -669,25 +674,45 @@ body.menu-open {
   z-index: 1;
 }
 
-/* Dégradé de couleurs pour chaque numéro */
+/* Dégradé de couleurs pour chaque numéro ET titre */
+.accompagnement > div > div:nth-child(1) h3 {
+  color: #00AEEF; /* Bleu le plus clair */
+}
+
 .accompagnement > div > div:nth-child(1) h3 span {
-  background: #00AEEF; /* Bleu le plus clair */
+  background: #00AEEF;
+}
+
+.accompagnement > div > div:nth-child(2) h3 {
+  color: #0099D6;
 }
 
 .accompagnement > div > div:nth-child(2) h3 span {
   background: #0099D6;
 }
 
+.accompagnement > div > div:nth-child(3) h3 {
+  color: #0085BD;
+}
+
 .accompagnement > div > div:nth-child(3) h3 span {
   background: #0085BD;
+}
+
+.accompagnement > div > div:nth-child(4) h3 {
+  color: #00629A;
 }
 
 .accompagnement > div > div:nth-child(4) h3 span {
   background: #00629A;
 }
 
+.accompagnement > div > div:nth-child(5) h3 {
+  color: #002b5c; /* Bleu le plus foncé */
+}
+
 .accompagnement > div > div:nth-child(5) h3 span {
-  background: #002b5c; /* Bleu le plus foncé */
+  background: #002b5c;
 }
 
 .accompagnement > div > div p {
@@ -1007,6 +1032,8 @@ footer a{
 
 
 
+
+
 /******* VERSION MOBILE *******/
 
 /* VERSION MOBILE */
@@ -1072,7 +1099,7 @@ footer a{
 
 
 
-
+/**** LAST PROJECT ***/
 @media (max-width: 768px) {
 
     .last-project {
@@ -1103,10 +1130,10 @@ footer a{
 
 
 
-/* Responsive */
+/* Responsive PRESENTATION*/
 @media (max-width: 768px) {
   .présentation h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
   
   .présentation h3 {
@@ -1114,7 +1141,7 @@ footer a{
   }
   
   .présentation > div:first-of-type p {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .présentation > div:nth-of-type(2),
@@ -1125,7 +1152,7 @@ footer a{
 }
 
 
-/* Responsive */
+/* Responsive CONFIANCE */
 @media (max-width: 768px) {
   .confiance {
     padding: 40px 20px;
@@ -1151,14 +1178,14 @@ footer a{
 }
 
 
-/* Responsive */
+/* Responsive ACCOMPAGNEMENT */
 @media (max-width: 768px) {
   .accompagnement h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .accompagnement > p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   /* Ligne verticale plus proche à gauche sur mobile */
@@ -1205,14 +1232,31 @@ footer a{
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 395px) {
 
   /* Ligne verticale plus proche à gauche sur mobile */
   .accompagnement > div::before {
     left: 25px;
-    bottom: 300px; /* Distance depuis le bas pour mobile */
+    bottom: 240px; /* Distance depuis le bas pour mobile */
   }
 }
 
+@media (max-width: 361px) {
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 255px; /* Distance depuis le bas pour mobile */
+  }
+}
+
+@media (max-width: 345px) {
+
+  /* Ligne verticale plus proche à gauche sur mobile */
+  .accompagnement > div::before {
+    left: 25px;
+    bottom: 277px; /* Distance depuis le bas pour mobile */
+  }
+}
 
 
