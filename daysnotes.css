@@ -274,8 +274,8 @@ h2 {
     box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
     flex: 1 1 200px;
-    min-width: 200px;
-    max-width: 250px;
+    min-width: 230px;
+    max-width: 260px;
 }
 
 .screenshot-card:hover {
@@ -305,7 +305,7 @@ h2 {
     margin-top: 12px;
     text-align: center;
     font-size: 0.95rem;
-    color: #666;
+    color: #5b29ef;
 }
 
 
@@ -417,6 +417,11 @@ footer a{
 }
 
 
+
+
+
+
+
 /* Media Queries pour l'adaptation mobile */
 @media (max-width: 768px) {
     body {
@@ -497,7 +502,7 @@ footer a{
     
     .screenshot-card {
         flex: 1 1 100%;
-        max-width: 300px;
+        max-width: 260px;
     }
     
     .cta {
