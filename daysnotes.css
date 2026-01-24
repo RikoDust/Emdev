@@ -66,7 +66,7 @@ header {
 }
 
 .app-title {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 600;
     color: #5280fc;
 }
@@ -78,8 +78,8 @@ header {
     color: #5280fc;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -99,6 +99,9 @@ header {
     overflow: hidden;
 }
 
+.hero h2{
+    margin-bottom: 0.2rem;
+}
 
 .hero-content {
     display: flex;
@@ -142,6 +145,7 @@ h2 {
 }
 
 .btn-primary {
+    margin-top: 3rem;
     padding: 18px 45px;
     background: linear-gradient(135deg, #56f6e4 0%, #5b29ef 100%);
     color: white;
@@ -160,6 +164,9 @@ h2 {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(82,128,252,0.4);
 }
+
+
+
 
 /* Features Section */
 .features {
@@ -183,7 +190,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -225,6 +232,7 @@ h2 {
     font-size: 26px;
     margin-right: 1.2rem;
     flex-shrink: 0;
+    color: #fff;
 }
 
 .feature-card h3 {
