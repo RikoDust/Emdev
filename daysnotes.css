@@ -258,6 +258,7 @@ h2 {
     font-size: 42px;
     color: #5280fc;
     margin-bottom: 50px;
+    margin-top: 1rem;
     font-weight: 700;
 }
 
@@ -393,10 +394,11 @@ h2 {
 
 /* Feedback Section */
 .feedback {
-    padding: 80px 20px;
+    padding: 30px 20px;
     background: white;
     width: 100%;
     max-width: 800px;
+    margin-bottom: 2rem;
 }
 
 .feedback-intro {
