@@ -867,6 +867,10 @@ footer a{
         margin-top: 0;
     }
     
+    .save_title{
+        font-size: 28px;
+    }
+
     .screenshots {
         padding: 40px 15px;
     }
